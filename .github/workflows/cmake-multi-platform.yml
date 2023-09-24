@@ -60,6 +60,7 @@ jobs:
           apt install libomp-dev
         elif [ "$RUNNER_OS" == "macOS" ]; then
           brew install libomp
+        fi
       shell: bash
 
 
