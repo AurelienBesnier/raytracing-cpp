@@ -55,11 +55,11 @@ jobs:
         echo "build-output-dir=${{ github.workspace }}/build" >> "$GITHUB_OUTPUT"
 
     - name:  Install
-      run:   |
-             if [ "$RUNNER_OS" == "Linux" ]; then
-                  apt install libomp-dev
-             elif [ "$RUNNER_OS" == "macOS" ]; then
-                  brew install libomp
+      run: |
+        if [ "$RUNNER_OS" == "Linux" ]; then
+          apt install libomp-dev
+        elif [ "$RUNNER_OS" == "macOS" ]; then
+          brew install libomp
       shell: bash
 
 
